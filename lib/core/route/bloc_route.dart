@@ -82,9 +82,9 @@ class RouteBloc extends Authenticated {
     push(page);
   }
 
-  backHome() {
-    final latest = _pageController.value;
-    latest.removeWhere((element) => element is! RouteHome);
-    _pageController.add(latest);
-  }
+  // backHome() {
+  //   final latest = _pageController.value;
+  //   latest.removeWhere((element) => element is! RouteHome);
+  //   _pageController.add(latest);
+  // }
 }
