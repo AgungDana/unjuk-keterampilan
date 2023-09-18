@@ -1,9 +1,10 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:unjukketrampilan/config/colors.dart';
 import 'package:unjukketrampilan/core/context.dart';
 import 'package:unjukketrampilan/core/route/bloc_route.dart';
 import 'package:unjukketrampilan/core/route/route_page.dart';
+import 'package:unjukketrampilan/modules/discover/bloc/bloc_discover.dart';
 
 final RouteObserver<PageRoute> routeObserver = RouteObserver<PageRoute>();
 
@@ -25,11 +26,15 @@ class _AppState extends State<App> {
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
-      providers: [],
+      providers: [
+        Provider(
+          create: (_) => DiscoverBloc(),
+        )
+      ],
       child: MaterialApp(
-        title: 'Fish Seller',
+        title: 'Vault',
         theme: ThemeData(
-          primarySwatch: Colors.blue,
+          primarySwatch: CustomColors().primaryColor,
         ),
         navigatorObservers: [routeObserver],
         // home: const MyHomePage(title: 'Flutter Demo Home Page'),
