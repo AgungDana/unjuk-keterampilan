@@ -8,6 +8,8 @@ class CustomColors {
   static const Color defaultBorder = Color(0xffB4B4B4);
   static const Color border = Color(0xff39A2DB);
 
+  static const Color purple = Color(0xff9901F8);
+
   static const Color dark = Color(0xff010101);
   static const Color grey = Color(0xff8C979F);
   static const Color fadedGrey = Color(0xffD7DFE4);
