@@ -47,6 +47,7 @@ class DiscoverPage extends StatelessWidget {
                           fontSize: 28,
                           fontWeight: FontWeight.w700),
                     ),
+                    const SizedBox(height: 12),
                     StreamBuilder<List<PlaylistModel>>(
                         stream: blocDiscover.listPlaylist.stream,
                         initialData: blocDiscover.listPlaylist.value,
