@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:unjukketrampilan/modules/homepage/screen/page_login.dart';
-import 'package:unjukketrampilan/modules/login/screen/page_login.dart';
-import 'package:unjukketrampilan/modules/register/screen/page_login.dart';
+import 'package:unjukketrampilan/modules/dashboard/screen/page_dashboard.dart';
 
 abstract class RoutePage {
   final MaterialPage page;
@@ -10,34 +8,10 @@ abstract class RoutePage {
   RoutePage(this.page, this.name, {this.isProtected = false});
 }
 
-// class RouteUiPage extends RoutePage {
-//   RouteUiPage()
-//       : super(
-//           const MaterialPage(child: UiPage()),
-//           'UI PAGE',
-//         );
-// }
-
-class RouteLogin extends RoutePage {
-  RouteLogin()
+class RouteDashboard extends RoutePage {
+  RouteDashboard()
       : super(
-          const MaterialPage(child: LoginPage()),
-          'login',
-        );
-}
-
-class RouteRegister extends RoutePage {
-  RouteRegister()
-      : super(
-          const MaterialPage(child: RegisterPage()),
-          'register',
-        );
-}
-
-class RouteHome extends RoutePage {
-  RouteHome()
-      : super(
-          const MaterialPage(child: HomePage()),
-          'home',
+          const MaterialPage(child: DashboardPage()),
+          '/dashboard',
         );
 }
