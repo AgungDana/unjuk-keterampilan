@@ -30,27 +30,30 @@ class VaultPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             SizedBox(),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: const [
-                Icon(
-                  Icons.queue_music,
-                  color: CustomColors.white,
-                  size: 104,
-                ),
-                Text(
-                  'Start adding to this playlist',
-                  style: TextStyle(color: CustomColors.white),
-                ),
-                SizedBox(height: 8),
-                Text(
-                  'Simply tap on the three-dots icon beside a track to add it ti a playlist',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(color: CustomColors.grey),
-                ),
-                SizedBox(height: 12),
-                CustomButton(textButton: 'Go to My Music'),
-              ],
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 40),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: const [
+                  Icon(
+                    Icons.queue_music,
+                    color: CustomColors.white,
+                    size: 104,
+                  ),
+                  Text(
+                    'Start adding to this playlist',
+                    style: TextStyle(color: CustomColors.white),
+                  ),
+                  SizedBox(height: 8),
+                  Text(
+                    'Simply tap on the three-dots icon beside a track to add it ti a playlist',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(color: CustomColors.grey),
+                  ),
+                  SizedBox(height: 12),
+                  CustomButton(textButton: 'Go to My Music'),
+                ],
+              ),
             ),
             MusicPlayed(blocDiscover: blocDiscover)
           ],
